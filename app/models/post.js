@@ -107,6 +107,13 @@ export default Model.extend(Comparable, ValidationEngine, {
         embedded: 'always',
         async: false
     }),
+    
+    detentionCenters: hasMany('detention-center', {
+        embedded: 'always',
+        async: false
+    }),
+    
+    
     createdBy: belongsTo('user', {async: true}),
     publishedBy: belongsTo('user', {async: true}),
     tags: hasMany('tag', {

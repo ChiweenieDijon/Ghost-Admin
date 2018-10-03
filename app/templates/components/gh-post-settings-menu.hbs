@@ -94,6 +94,14 @@
                         {{gh-error-message errors=post.errors property="authors" data-test-error="authors"}}
                     {{/gh-form-group}}
                 {{/unless}}
+                
+                
+                {{#gh-form-group class="for-select" errors=post.errors hasValidated=post.hasValidated property="detentionCenters" data-test-input="detentionCenters"}}
+                    <label for="detention-center-list">Detention Centers</label>
+                      {{gh-psm-detention-centers-input selectedDetentionCenters=post.detentionCenters updateDetentionCenters=(action "changeDetentionCenters") triggerId="detention-center-list"}}
+                      {{gh-error-message errors=post.errors property="detentionCenters" data-test-error="detentionCenters"}}
+                {{/gh-form-group}}
+                
 
                 <ul class="nav-list nav-list-block">
                     <li class="nav-list-item" {{action "showSubview" "meta-data"}} data-test-button="meta-data">

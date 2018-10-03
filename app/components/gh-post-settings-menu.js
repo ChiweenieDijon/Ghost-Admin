@@ -482,6 +482,29 @@ export default Component.extend(SettingsMenuMixin, {
                 post.rollbackAttributes();
             });
         },
+        
+        changeDetentionCenters(newDcs) {
+            let post = this.get('post');
+
+            // return if nothing changed
+            if (newDcs.mapBy('id').join() === post.get('detentionCenters').mapBy('id').join()) {
+                return;
+            }
+
+            post.set('detentionCenters', newDcs);
+            post.validate({property: 'detentionCenters'});
+
+            // if this is a new post (never been saved before), don't try to save it
+            if (post.get('isNew')) {
+                return;
+            }
+            
+                        
+            this.get('savePost').perform().catch((error) => {
+                this.showError(error);
+                post.rollbackAttributes();
+            });
+        },
 
         deletePost() {
             if (this.get('deletePost')) {
