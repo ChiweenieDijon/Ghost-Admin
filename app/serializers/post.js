@@ -8,7 +8,7 @@ export default ApplicationSerializer.extend(EmbeddedRecordsMixin, {
     attrs: {
         authors: {embedded: 'always'},
         tags: {embedded: 'always'},
-        detentionCenters:{key:'detention_centers', embedded: 'always'},
+        detentionCenters:{ embedded: 'always'},
         publishedAtUTC: {key: 'published_at'},
         createdAtUTC: {key: 'created_at'},
         updatedAtUTC: {key: 'updated_at'}
