@@ -1,6 +1,6 @@
 {
   "name": "ghost-admin",
-  "version": "2.9.0",
+  "version": "2.9.0-gene.2",
   "description": "Ember.js admin client for Ghost",
   "author": "Ghost Foundation",
   "homepage": "http://ghost.org",
@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git://github.com/ChiweenieDijon/Ghost-Admin.git"
   },
-  "bugs": "https://github.com/TryGhost/Ghost/issues",
+  "bugs": "https://github.com/ChiweenieDijon/Ghost/issues",
   "contributors": "https://github.com/TryGhost/Ghost-Admin/graphs/contributors",
   "license": "MIT",
   "private": true,
